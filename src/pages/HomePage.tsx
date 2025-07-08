@@ -150,7 +150,7 @@ const HomePage: React.FC = () => {
               {user ? (
                 <>
                   <Link
-                    to="/dashboard"
+                    to="/Dashboard"
                     className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Your Dashboard
