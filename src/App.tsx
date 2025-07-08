@@ -7,6 +7,10 @@ import AuthPage from './components/Auth/AuthPage';
 import HomePage from './pages/HomePage';
 import ChatPage from './pages/ChatPage';
 import DevToolsPage from './pages/DevToolsPage';
+import Dashboard from './pages/Dashboard';
+import TaskManagement from './pages/TaskManagement';
+import ProjectCollaboration from './pages/ProjectCollaboration';
+import CodeRepository from './pages/CodeRepository';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, loading } = useAuth();
@@ -32,15 +36,18 @@ const AppRoutes: React.FC = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {user && <Navbar />}
       <Routes>
+        
         <Route path="/auth" element={user ? <Navigate to="/" /> : <AuthPage />} />
         <Route path="/" element={
           <ProtectedRoute>
             <HomePage />
+
           </ProtectedRoute>
         } />
         <Route path="/chat" element={
           <ProtectedRoute>
             <ChatPage />
+          
           </ProtectedRoute>
         } />
         <Route path="/dev-tools" element={
@@ -48,6 +55,29 @@ const AppRoutes: React.FC = () => {
             <DevToolsPage />
           </ProtectedRoute>
         } />
+
+         <Route path="/Dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+         <Route path="/TaskManagement" element={
+          <ProtectedRoute>
+            <TaskManagement />
+          </ProtectedRoute>
+        } />
+         <Route path="/ProjectCollaboration" element={
+          <ProtectedRoute>
+            <ProjectCollaboration />
+          </ProtectedRoute>
+        } />
+
+<Route path="/CodeRepository" element={
+          <ProtectedRoute>
+            <CodeRepository />
+          </ProtectedRoute>
+        } />
+
         <Route path="/pages" element={
           <ProtectedRoute>
             <div className="container mx-auto px-4 py-8">

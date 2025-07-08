@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+
 import { 
   MessageCircle, Wrench, FileText, BookOpen, CheckSquare, 
   Users, Code2, Star, Calendar, TrendingUp, GraduationCap,
@@ -47,7 +48,7 @@ const HomePage: React.FC = () => {
       icon: CheckSquare,
       title: 'Task Manager',
       description: 'Kanban-style task management with deadlines, priorities, and group assignments.',
-      link: '/todos',
+      link: '/taskmanagement',
       color: 'bg-rose-500',
       gradient: 'from-rose-500 to-rose-600'
     },
@@ -55,7 +56,7 @@ const HomePage: React.FC = () => {
       icon: GitPullRequest,
       title: 'Project Collaboration',
       description: 'Git-integrated project workspace for team coding assignments and version control.',
-      link: '/projects',
+      link: '/ProjectCollaboration',
       color: 'bg-fuchsia-500',
       gradient: 'from-fuchsia-500 to-fuchsia-600'
     },
@@ -63,7 +64,7 @@ const HomePage: React.FC = () => {
       icon: Database,
       title: 'Code Repository',
       description: 'Searchable database of code snippets and algorithms shared by students.',
-      link: '/snippets',
+      link: '/CodeRepository',
       color: 'bg-indigo-500',
       gradient: 'from-indigo-500 to-indigo-600'
     },
@@ -117,7 +118,7 @@ const HomePage: React.FC = () => {
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/hero-image.jpg"
+            src='../assets/hero-image.jpg'
             alt="Dire Dawa University students collaborating"
             className="w-full h-full object-cover object-center"
           />
