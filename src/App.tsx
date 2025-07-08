@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import TaskManagement from './pages/TaskManagement';
 import ProjectCollaboration from './pages/ProjectCollaboration';
 import CodeRepository from './pages/CodeRepository';
+import CourseSupport from './pages/CourseSupport';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, loading } = useAuth();
@@ -75,6 +76,12 @@ const AppRoutes: React.FC = () => {
 <Route path="/CodeRepository" element={
           <ProtectedRoute>
             <CodeRepository />
+          </ProtectedRoute>
+        } />
+
+        <Route path="/CourseSupport" element={
+          <ProtectedRoute>
+            <CourseSupport />
           </ProtectedRoute>
         } />
 

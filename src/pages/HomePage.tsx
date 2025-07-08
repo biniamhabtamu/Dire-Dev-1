@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
       icon: GraduationCap,
       title: 'Course Support',
       description: 'University course-specific resources and discussion channels.',
-      link: '/courses',
+      link: '/CourseSupport',
       color: 'bg-teal-500',
       gradient: 'from-teal-500 to-teal-600'
     },
