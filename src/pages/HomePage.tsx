@@ -156,7 +156,7 @@ const HomePage: React.FC = () => {
                     Your Dashboard
                   </Link>
                   <Link
-                    to="/community"
+                    to="/discussion"
                     className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Explore Community
