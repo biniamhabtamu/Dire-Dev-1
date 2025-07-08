@@ -112,15 +112,31 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white overflow-hidden">
+      {/* Hero Section with Image */}
+      <div className="relative h-screen max-h-[800px] overflow-hidden">
+        {/* Background Image with Gradient Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="/hero-image.jpg"
+            alt="Dire Dawa University students collaborating"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-indigo-600/80 to-purple-600/90" />
+        </div>
+
+        {/* Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-[length:100px_100px]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="relative z-10 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to <span className="text-blue-200">Dire-Dev</span>
+
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="text-white">Welcome to </span>
+              <span className="text-blue-200 bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">
+                Dire-Dev
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               The comprehensive academic platform for Dire Dawa University's tech community. 
