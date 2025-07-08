@@ -9,6 +9,8 @@ import {
   ChevronRight, CheckCircle, AlertCircle, MoreVertical
 } from 'lucide-react';
 
+import { FaPlus } from 'react-icons/fa'; // Import the icon
+
 const CourseSupport: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'overview' | 'resources' | 'assignments' | 'discussions' | 'grades'>('overview');
   const [selectedCourse, setSelectedCourse] = useState<number | null>(null);
@@ -112,6 +114,7 @@ const CourseSupport: React.FC = () => {
   const currentCourse = selectedCourse 
     ? courses.find(course => course.id === selectedCourse)
     : courses[0];
+    
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
