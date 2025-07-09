@@ -6,10 +6,9 @@ import {
   MessageSquare, Download, Bookmark, BarChart2, 
   ClipboardList, Clock, Award, GraduationCap, Bell, 
   Search, ChevronDown, Star, HelpCircle, File, 
-  ChevronRight, CheckCircle, AlertCircle, MoreVertical
+  ChevronRight, CheckCircle, AlertCircle, MoreVertical,
+  Plus 
 } from 'lucide-react';
-
-import { FaPlus } from 'react-icons/fa'; // Import the icon
 
 const CourseSupport: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'overview' | 'resources' | 'assignments' | 'discussions' | 'grades'>('overview');

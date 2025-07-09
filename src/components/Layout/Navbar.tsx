@@ -24,14 +24,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg transition-transform group-hover:rotate-12">
-              <Code className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Dire-Dev
-            </span>
-          </Link>
+       <Link to="/" className="flex items-center space-x-2 group">
+  <div className="bg-gradient-to-r from-rose-500 to-violet-500 p-2 rounded-xl transition-transform transform group-hover:rotate-12 group-hover:scale-110 shadow-md">
+    <Code className="w-6 h-6 text-white" />
+  </div>
+  <span className="text-xl font-extrabold bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent transition-colors duration-300 group-hover:from-pink-400 group-hover:to-purple-500">
+    Dire-Dev
+  </span>
+</Link>
+
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
